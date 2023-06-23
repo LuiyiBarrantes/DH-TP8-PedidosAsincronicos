@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Película</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Dosis:400,700"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Película</title>
+        <link
+        href="https://fonts.googleapis.com/css?family=Dosis:400,700"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 </head>
 <body>
+    <h1 class="main"></h1>
+    <a class="botonBorrar" href="home.html">Volver al inicio</a>
     <form class="card formulario">
         <input type="hidden" name="id">
         <div>        
@@ -38,7 +42,7 @@
         <br>
         <div class="action">
             <button class="botonAgregar" >Editar</button>
-            <button class="botonAgregar">Crear</button>
+            <button class="botonAgregar" id="crear">Crear</button>
             <button class="botonBorrar">Eliminar</button>
         </div>
     </form>

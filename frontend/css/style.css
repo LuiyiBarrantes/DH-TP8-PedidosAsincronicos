@@ -32,7 +32,7 @@ img {
 }
 
 p {
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 2.5rem 1.5rem;
   margin: 0;
 }
 
@@ -48,6 +48,7 @@ p {
   border-radius: 12px;
   overflow: hidden;
   transition: all .2s linear;
+  position: relative
 }
 
 .card:hover {
@@ -57,14 +58,27 @@ p {
 .action {
   text-align: center;
 }
-.botonAgregar , .botonModificar{
+.botonAgregar{
   color: white;
   background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
   font-size: 1rem;
   padding: 10px;
   border-radius: 10px;
   border: 0;
+  margin: 5px;  
+  cursor: pointer;
+}
+.botonModificar{
+  color: white;
+  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  font-size: 1rem;
+  padding: 10px 4px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.329);
   margin: 5px;
+  position: absolute;
+  bottom: 15px;
+  right: 0px;
 }
 .botonBorrar{
   color: white;
@@ -73,6 +87,7 @@ p {
   border-radius: 10px;
   border: 0;
   margin: 5px;
+  cursor: pointer;
 }
 .formulario{
   margin: auto;
@@ -87,6 +102,19 @@ p {
 input, select{
   width: 60%;
   height: 25px;
+}
+.favStar{
+  top: 30px;
+  position: absolute;
+  right: 15px;
+  font-size: 30px;
+  perspective: 1000px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  color: b;
+}
+.favStar:hover {
+  transform: rotateY(180deg);
 }
 
 @media screen and (min-width: 600px) {

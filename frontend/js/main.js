@@ -23,8 +23,15 @@ window.onload = async () => {
       const p = document.createElement("p");
       p.textContent = `Rating: ${movie.rating}`;
 
-      const duracion = document.createElement("p");
-      duracion.textContent = `Duración: ${movie.length}`;
+
+      const editButton = document.createElement("a")
+      editButton.textContent = 'Modificar'
+      editButton.setAttribute('href', `formulario.html?id=${movie.id}`)
+      editButton.setAttribute('class', 'botonModificar')
+
+      const star = document.createElement('i')
+      star.setAttribute('class', "far fa-star favStar")
+      star.setAttribute('id',`movie${movie.id}`)
 
       container.appendChild(card);
       card.appendChild(h1);
@@ -34,12 +41,20 @@ window.onload = async () => {
         genero.textContent = `Genero: ${movie.genre.name}`;
         card.appendChild(genero);
       }
-      card.appendChild(duracion);
+      if (movie.length !== null) {
+        const duracion = document.createElement("p");
+        duracion.textContent = `Duración: ${movie.length}`;
+        card.appendChild(duracion);
+      }
+
+      card.appendChild(editButton)
+
+      card.appendChild(star)
     });
-  
+
   } catch (error) {
     console.log(error);
   }
 
-  
+
 };
